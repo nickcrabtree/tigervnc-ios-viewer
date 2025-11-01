@@ -1,6 +1,6 @@
 use app_core::VncApp;
 use log::info;
-use winit::{event::Event, event_loop::EventLoop, window::WindowBuilder};
+use winit::{event::Event, event_loop::EventLoop};
 
 #[no_mangle]
 pub extern "C" fn rust_main() {
@@ -14,10 +14,10 @@ fn ios_run() {
     info!("ios_run() starting");
 
     let event_loop = EventLoop::new().expect("EventLoop::new");
-    let _window = WindowBuilder::new()
-        .with_title("TigerVNC iOS Viewer")
-        .build(&event_loop)
-        .expect("window");
+    let _window = event_loop.create_window(
+        winit::window::Window::default_attributes()
+            .with_title("TigerVNC iOS Viewer")
+    ).expect("window");
 
     let mut app = VncApp::new();
 

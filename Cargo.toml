@@ -26,7 +26,7 @@ thiserror = "1.0"
 
 # iOS-only bridging (used by ios-runner with cfg(target_os="ios"))
 objc2 = "0.5"
-objc2-foundation = { version = "0.5", features = ["all"] }
+objc2-foundation = { version = "0.2.2", features = ["NSString"] }
 
 # TigerVNC protocol crates from the sibling rust-vnc-viewer repo
 rfb-common = { path = "../tigervnc/rust-vnc-viewer/rfb-common" }

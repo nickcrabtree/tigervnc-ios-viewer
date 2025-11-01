@@ -1,7 +1,3 @@
-pub mod input;
-pub mod cache;
-pub mod settings;
-
 use log::info;
 
 /// Placeholder core app, wraps winit+wgpu+egui integration.
