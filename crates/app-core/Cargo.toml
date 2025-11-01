@@ -1,0 +1,23 @@
+[package]
+name = "app-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+winit = { workspace = true }
+wgpu = { workspace = true }
+egui = { workspace = true }
+egui-winit = { workspace = true }
+egui-wgpu = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+tokio = { workspace = true }
+
+# TigerVNC protocol crates
+rfb-common = { workspace = true }
+rfb-pixelbuffer = { workspace = true }
+rfb-protocol = { workspace = true }
+rfb-encodings = { workspace = true }
+rfb-client = { workspace = true }

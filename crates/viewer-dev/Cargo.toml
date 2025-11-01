@@ -1,0 +1,10 @@
+[package]
+name = "viewer-dev"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+app-core = { path = "../app-core" }
+winit = { workspace = true }
+env_logger = { workspace = true }
+log = { workspace = true }

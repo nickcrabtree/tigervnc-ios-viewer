@@ -1,0 +1,18 @@
+[package]
+name = "ios-runner"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "ios_runner"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+app-core = { path = "../app-core" }
+winit = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
+
+[target.'cfg(target_os = "ios")'.dependencies]
+objc2 = { workspace = true }
+objc2-foundation = { workspace = true }

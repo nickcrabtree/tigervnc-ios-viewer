@@ -1,0 +1,38 @@
+[workspace]
+members = [
+  "crates/app-core",
+  "crates/ios-runner",
+  "crates/viewer-dev",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.81"
+
+[workspace.dependencies]
+winit = "0.30"
+wgpu = "22"
+egui = "0.29"
+egui-winit = "0.29"
+egui-wgpu = "0.29"
+log = "0.4"
+env_logger = "0.11"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1.35", features = ["full"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+# iOS-only bridging (used by ios-runner with cfg(target_os="ios"))
+objc2 = "0.5"
+objc2-foundation = { version = "0.5", features = ["all"] }
+
+# TigerVNC protocol crates from the sibling rust-vnc-viewer repo
+rfb-common = { path = "../tigervnc/rust-vnc-viewer/rfb-common" }
+rfb-pixelbuffer = { path = "../tigervnc/rust-vnc-viewer/rfb-pixelbuffer" }
+rfb-protocol = { path = "../tigervnc/rust-vnc-viewer/rfb-protocol" }
+rfb-encodings = { path = "../tigervnc/rust-vnc-viewer/rfb-encodings" }
+rfb-client = { path = "../tigervnc/rust-vnc-viewer/rfb-client" }
+rfb-display = { path = "../tigervnc/rust-vnc-viewer/rfb-display" }
+platform-input = { path = "../tigervnc/rust-vnc-viewer/platform-input" }

@@ -1,0 +1,47 @@
+# Rust
+/target/
+**/target/
+Cargo.lock
+# keep Cargo.lock for bins; we will commit the root one
+!Cargo.lock
+
+# Xcode / iOS
+**/*.xcodeproj/*
+!**/*.xcodeproj/project.pbxproj
+**/*.xcodeproj/xcuserdata/
+**/*.xcworkspace/xcuserdata/
+DerivedData/
+build/
+*.ipa
+Pods/
+Podfile.lock
+
+# macOS cruft
+.DS_Store
+
+# OS/editor
+*.swp
+*.swo
+*~
+Thumbs.db
+
+# Apple asset catalogs compilation outputs
+*.car
+
+# Logs
+*.log
+
+# Generated bindings/headers (if we add cbindgen later)
+bindings.h
+
+# cargo-apple build outputs
+.apple-build/
+
+# Node/npm (if any tooling later)
+node_modules/
+
+# fastlane (if used later)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
